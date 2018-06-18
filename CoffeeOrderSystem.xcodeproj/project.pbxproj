@@ -18,7 +18,7 @@
 		A04E8AF920D7559B0055E819 /* ItemList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AF820D7559B0055E819 /* ItemList.storyboard */; };
 		A04E8AFB20D755A40055E819 /* OrderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AFA20D755A40055E819 /* OrderList.storyboard */; };
 		A04E8B0020D755F10055E819 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8AFF20D755F10055E819 /* TabBarViewController.swift */; };
-		A04E8B0220D7563B0055E819 /* ItemBtnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0120D7563B0055E819 /* ItemBtnViewController.swift */; };
+		A04E8B0220D7563B0055E819 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0120D7563B0055E819 /* ItemViewController.swift */; };
 		A04E8B0420D7564D0055E819 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0320D7564D0055E819 /* ItemListViewController.swift */; };
 		A04E8B0720D758050055E819 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0520D758050055E819 /* ItemTableViewCell.swift */; };
 		A04E8B0820D758050055E819 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B0620D758050055E819 /* ItemTableViewCell.xib */; };
@@ -45,7 +45,7 @@
 		A04E8AF820D7559B0055E819 /* ItemList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemList.storyboard; sourceTree = "<group>"; };
 		A04E8AFA20D755A40055E819 /* OrderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderList.storyboard; sourceTree = "<group>"; };
 		A04E8AFF20D755F10055E819 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		A04E8B0120D7563B0055E819 /* ItemBtnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBtnViewController.swift; sourceTree = "<group>"; };
+		A04E8B0120D7563B0055E819 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		A04E8B0320D7564D0055E819 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		A04E8B0520D758050055E819 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		A04E8B0620D758050055E819 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -174,9 +174,9 @@
 		A04E8AFC20D755BD0055E819 /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
-				A04E8B0120D7563B0055E819 /* ItemBtnViewController.swift */,
-				A04E8B0320D7564D0055E819 /* ItemListViewController.swift */,
+				A04E8B0120D7563B0055E819 /* ItemViewController.swift */,
 				A04E8B1120D76DA20055E819 /* ItemBtnListViewController.swift */,
+				A04E8B0320D7564D0055E819 /* ItemListViewController.swift */,
 			);
 			path = ItemList;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 				A04E8B1220D76DA20055E819 /* ItemBtnListViewController.swift in Sources */,
 				A04E8AF720D754B30055E819 /* COSUIStoryboard.swift in Sources */,
 				A04E8B0E20D75B6E0055E819 /* ItemInfo.swift in Sources */,
-				A04E8B0220D7563B0055E819 /* ItemBtnViewController.swift in Sources */,
+				A04E8B0220D7563B0055E819 /* ItemViewController.swift in Sources */,
 				A04E8B0720D758050055E819 /* ItemTableViewCell.swift in Sources */,
 				A04E8B0420D7564D0055E819 /* ItemListViewController.swift in Sources */,
 				A04E8B0A20D759110055E819 /* OrderListViewController.swift in Sources */,

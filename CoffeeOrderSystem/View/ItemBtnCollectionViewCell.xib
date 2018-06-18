@@ -34,6 +34,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="167" height="171"/>
+            <connections>
+                <outlet property="itemBtn" destination="EGk-wV-Lhu" id="HR5-3c-Odi"/>
+            </connections>
             <point key="canvasLocation" x="23.5" y="-23.5"/>
         </collectionViewCell>
     </objects>

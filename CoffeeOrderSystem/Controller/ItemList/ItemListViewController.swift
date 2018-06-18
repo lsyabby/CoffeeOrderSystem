@@ -10,6 +10,7 @@ import UIKit
 
 class ItemListViewController: UIViewController {
     
+    let firebaseManager = FirebaseManager()
     var selectedInt: [Int] = []
     var itemInfo: [ItemInfo] = []
     var seletedItems: [ItemInfo] = []
@@ -17,12 +18,15 @@ class ItemListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        getData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func getData() {
+        
+        firebaseManager.getItemInfo { (itemlist) in
+            
+            self.itemInfo = itemlist
+        }
     }
     
     func filterItems() {

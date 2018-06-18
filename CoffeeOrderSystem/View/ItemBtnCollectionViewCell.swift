@@ -10,9 +10,17 @@ import UIKit
 
 class ItemBtnCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var itemBtn: UIButton!
+    
     override func awakeFromNib() {
+        
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
+    func setupBtnImage(itemInfo: ItemInfo) {
+        
+        let img = UIImage(named: itemInfo.image)
+        
+        itemBtn.setImage(img, for: .normal)
+    }
 }

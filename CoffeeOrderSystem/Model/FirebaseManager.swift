@@ -18,26 +18,23 @@ class FirebaseManager {
     
     func getItemInfo(completion: @escaping ([ItemInfo]) -> Void) {
         
-        self.ref
-            .child("itmes")
-            .observeSingleEvent(of: .value) { (snapshot) in
+        self.ref.observeSingleEvent(of: .value) { (snapshot) in
+            
+            var infoList: [ItemInfo] = []
+            
+            guard let json = snapshot.value as? [String: Any],
+                let jsonResult = json["items"] as? [AnyObject] else { return }
+            
+            for i in 0..<jsonResult.count {
+                guard let name = jsonResult[i]["name"] as? String,
+                    let price = jsonResult[i]["price"] as? Int,
+                    let image = jsonResult[i]["image"] as? String else { return }
                 
-                var infoList: [ItemInfo] = []
+                let info = ItemInfo(name: name, price: price, image: image)
                 
-                guard let value = snapshot.value as? [String: [String: Any]] else { return }
-                    
-                for item in value.values {
-                    
-                    guard let name = item["name"] as? String,
-                        let price = item["price"] as? Int,
-                        let image = item["image"] as? String else { return }
-                    
-                    let info = ItemInfo(name: name, price: price, image: image)
-                    
-                    infoList.append(info)
-                }
-                completion(infoList)
+                infoList.append(info)
+            }
+            completion(infoList)
         }
     }
-    
 }

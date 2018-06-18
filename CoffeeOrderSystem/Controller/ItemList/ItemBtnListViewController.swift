@@ -11,12 +11,17 @@ import UIKit
 class ItemBtnListViewController: UIViewController {
 
     @IBOutlet weak var btnCollectionView: UICollectionView!
+    let firebaseManager = FirebaseManager()
+    var itemInfo: [ItemInfo] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupListGridView()
         
         registerCell()
+        
+        getData()
     }
 
     
@@ -32,19 +37,27 @@ class ItemBtnListViewController: UIViewController {
         
         btnCollectionView.register(upnib, forCellWithReuseIdentifier: String(describing: ItemBtnCollectionViewCell.self))
     }
-
+    
+    func getData() {
+        
+        firebaseManager.getItemInfo { (itemlist) in
+            
+            self.itemInfo = itemlist
+        }
+    }
 }
 
 
 extension ItemBtnListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemBtnCollectionViewCell", for: indexPath) as? ItemBtnCollectionViewCell {
+            cell.setupBtnImage(itemInfo: itemInfo[indexPath.row])
             return cell
         }
         return UICollectionViewCell()

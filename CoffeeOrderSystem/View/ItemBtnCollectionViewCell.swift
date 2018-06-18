@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ItemBtnCollectionViewCell: UICollectionViewCell {
 
@@ -17,10 +18,10 @@ class ItemBtnCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupBtnImage(itemInfo: ItemInfo) {
+    func setupBtnImage(itemInfo: String) {
         
-        let img = UIImage(named: itemInfo.image)
+        itemBtn.imageView?.contentMode = .scaleAspectFill
         
-        itemBtn.setImage(img, for: .normal)
+        itemBtn.sd_setBackgroundImage(with: URL(string: itemInfo), for: .normal)
     }
 }

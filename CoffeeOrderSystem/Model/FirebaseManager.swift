@@ -10,13 +10,18 @@ import Foundation
 import FirebaseCore
 import FirebaseDatabase
 
+protocol FirebaseManagerDelegate: class {
+
+    func manager(didGet: [ItemInfo])
+}
+
 
 class FirebaseManager {
     
-    static let shared = FirebaseManager()
+    weak var delegate: FirebaseManagerDelegate?
     lazy var ref = Database.database().reference()
     
-    func getItemInfo(completion: @escaping ([ItemInfo]) -> Void) {
+    func getItemInfo() {
         
         self.ref.observeSingleEvent(of: .value) { (snapshot) in
             
@@ -34,7 +39,8 @@ class FirebaseManager {
                 
                 infoList.append(info)
             }
-            completion(infoList)
+            
+            self.delegate?.manager(didGet: infoList)
         }
     }
 }

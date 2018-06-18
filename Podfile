@@ -8,5 +8,6 @@ target 'CoffeeOrderSystem' do
   # Pods for CoffeeOrderSystem
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'SDWebImage', '~> 4.0'
 
 end

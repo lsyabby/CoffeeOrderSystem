@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ItemBtnListViewController: UIViewController {
 
     @IBOutlet weak var btnCollectionView: UICollectionView!
@@ -17,17 +18,16 @@ class ItemBtnListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupCollectionView()
+        
         setupListGridView()
         
-        registerCell()
+        firebaseManager.delegate = self
         
-        getData()
+        firebaseManager.getItemInfo()
     }
 
-    
-    func registerCell() {
-        
-//        btnCollectionView.showsHorizontalScrollIndicator = false
+    func setupCollectionView() {
         
         btnCollectionView.delegate = self
         
@@ -37,29 +37,24 @@ class ItemBtnListViewController: UIViewController {
         
         btnCollectionView.register(upnib, forCellWithReuseIdentifier: String(describing: ItemBtnCollectionViewCell.self))
     }
-    
-    func getData() {
-        
-        firebaseManager.getItemInfo { (itemlist) in
-            
-            self.itemInfo = itemlist
-        }
-    }
 }
 
 
 extension ItemBtnListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return itemInfo.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemBtnCollectionViewCell", for: indexPath) as? ItemBtnCollectionViewCell {
-            cell.setupBtnImage(itemInfo: itemInfo[indexPath.row])
+
+            cell.setupBtnImage(itemInfo: itemInfo[indexPath.row].image)
+            
             return cell
         }
+        
         return UICollectionViewCell()
     }
     
@@ -77,5 +72,16 @@ extension ItemBtnListViewController: UICollectionViewDelegate, UICollectionViewD
             
             categoryCollectionViewFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
         }
+    }
+}
+
+
+extension ItemBtnListViewController: FirebaseManagerDelegate {
+
+    func manager(didGet: [ItemInfo]) {
+
+        self.itemInfo = didGet
+
+        self.btnCollectionView.reloadData()
     }
 }

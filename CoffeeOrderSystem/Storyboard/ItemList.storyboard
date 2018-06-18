@@ -36,7 +36,7 @@
                                     <constraint firstAttribute="height" constant="193" id="Nwn-uC-vnG"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="tnn-6U-S3v" kind="embed" id="ubo-7t-qds"/>
+                                    <segue destination="tnn-6U-S3v" kind="embed" identifier="BtnListVC" id="ubo-7t-qds"/>
                                 </connections>
                             </containerView>
                         </subviews>

@@ -13,14 +13,13 @@ import Firebase
 class ItemViewController: UIViewController {
 
     private var itemListVC: ItemListViewController!
+    private var btnListVC: ItemBtnListViewController!
     let firebaseManager = FirebaseManager()
     var itemInfo: [ItemInfo] = []
-    var selectedInt: [Int] = []
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,10 +27,25 @@ class ItemViewController: UIViewController {
             
             self.itemListVC = destination
             
-            destination.selectedInt = self.selectedInt
+//            destination.selectedInt = self.selectedInt
             
             destination.itemInfo = self.itemInfo
+            
+            
+        } else if let destination = segue.destination as? ItemBtnListViewController, segue.identifier == "BtnListVC" {
+            
+            destination.delegate = self
+            
+            self.btnListVC = destination
         }
     }
+}
 
+
+extension ItemViewController: ItemBtnListViewControllerDelegate {
+   
+    func itemSelect(info: ItemInfo) {
+        
+        self.itemInfo.append(info)
+    }
 }

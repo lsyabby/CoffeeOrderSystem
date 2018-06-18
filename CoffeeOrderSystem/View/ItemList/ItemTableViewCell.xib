@@ -39,20 +39,28 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-GG-AiT">
-                        <rect key="frame" x="221" y="46" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="221" y="46" width="30" height="30"/>
+                        <state key="normal" title="Iced">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwy-IF-TNG">
-                        <rect key="frame" x="221" y="82" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="221" y="82" width="30" height="30"/>
+                        <state key="normal" title="Yes">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-ON-v18">
-                        <rect key="frame" x="296" y="46" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="280" y="46" width="30" height="30"/>
+                        <state key="normal" title="Hot">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q21-b0-QlE">
-                        <rect key="frame" x="296" y="82" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="280" y="82" width="30" height="30"/>
+                        <state key="normal" title="NO">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOx-TR-baq">
                         <rect key="frame" x="12" y="12" width="105" height="105"/>
@@ -83,6 +91,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="itemImageView" destination="bOx-TR-baq" id="fXr-6v-NBb"/>
+                <outlet property="itemNameLabel" destination="SJY-lx-I4X" id="5Et-3p-idu"/>
+            </connections>
             <point key="canvasLocation" x="43.5" y="-28"/>
         </tableViewCell>
     </objects>

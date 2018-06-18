@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var itemNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +25,10 @@ class ItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupTableViewCell(itemInfo: ItemInfo) {
+        
+        itemImageView.sd_setImage(with: URL(string: itemInfo.image))
+        
+        itemNameLabel.text = itemInfo.name
+    }
 }

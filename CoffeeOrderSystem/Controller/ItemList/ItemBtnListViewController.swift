@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol ItemBtnListViewControllerDelegate: class {
+    
+    func itemSelect(info: ItemInfo)
+}
+
 
 class ItemBtnListViewController: UIViewController {
 
     @IBOutlet weak var btnCollectionView: UICollectionView!
     let firebaseManager = FirebaseManager()
     var itemInfo: [ItemInfo] = []
+    weak var delegate: ItemBtnListViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +43,22 @@ class ItemBtnListViewController: UIViewController {
         
         btnCollectionView.register(upnib, forCellWithReuseIdentifier: String(describing: ItemBtnCollectionViewCell.self))
     }
+    
+    func setupListGridView() {
+        
+        let screenSize = UIScreen.main.bounds
+        
+        if let categoryCollectionViewFlowLayout = btnCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            
+            categoryCollectionViewFlowLayout.itemSize = CGSize(width: screenSize.width / 4 - 2.5, height: screenSize.width / 4 - 2.5)
+            
+            categoryCollectionViewFlowLayout.minimumInteritemSpacing = 0
+            
+            categoryCollectionViewFlowLayout.minimumLineSpacing = 0
+            
+            categoryCollectionViewFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+        }
+    }
 }
 
 
@@ -58,20 +80,9 @@ extension ItemBtnListViewController: UICollectionViewDelegate, UICollectionViewD
         return UICollectionViewCell()
     }
     
-    func setupListGridView() {
-        
-        let screenSize = UIScreen.main.bounds
-        
-        if let categoryCollectionViewFlowLayout = btnCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            
-            categoryCollectionViewFlowLayout.itemSize = CGSize(width: screenSize.width / 4 - 2.5, height: screenSize.width / 4 - 2.5)
-            
-            categoryCollectionViewFlowLayout.minimumInteritemSpacing = 0
-            
-            categoryCollectionViewFlowLayout.minimumLineSpacing = 0
-            
-            categoryCollectionViewFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
-        }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        self.delegate?.itemSelect(info: itemInfo[indexPath.row])
     }
 }
 

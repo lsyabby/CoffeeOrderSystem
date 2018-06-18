@@ -13,25 +13,13 @@ class ItemListViewController: UIViewController {
     @IBOutlet weak var ItemTableView: UITableView!
     
     let firebaseManager = FirebaseManager()
-    var selectedInt: [Int] = []
-    var itemInfo: [ItemInfo] = []
-    var seletedItems: [ItemInfo] = []
+    var itemInfo: [ItemInfo]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
-        
-//        getData()
     }
-
-//    func getData() {
-//
-//        firebaseManager.getItemInfo { (itemlist) in
-//
-//            self.itemInfo = itemlist
-//        }
-//    }
     
     func setupTableView() {
         
@@ -49,15 +37,18 @@ class ItemListViewController: UIViewController {
 extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return itemInfo.count
+        guard let item = itemInfo else { return 0 }
+        return item.count
         
-        return 3
+//        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell,
+        let item = itemInfo else { return UITableViewCell() }
         
+        cell.setupTableViewCell(itemInfo: item[indexPath.row])
         
         return cell
     }

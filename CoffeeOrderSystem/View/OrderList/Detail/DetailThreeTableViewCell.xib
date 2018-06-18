@@ -97,6 +97,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cancelBtn" destination="l3E-2C-zTg" id="0M6-Nl-mOD"/>
+                <outlet property="commitBtn" destination="10a-Nm-yEc" id="zXM-Hw-8EH"/>
                 <outlet property="totalItemLabel" destination="EWG-eN-i03" id="dWT-tZ-k2u"/>
                 <outlet property="totalPriceLabel" destination="LME-e3-WLr" id="tJa-by-Giz"/>
             </connections>

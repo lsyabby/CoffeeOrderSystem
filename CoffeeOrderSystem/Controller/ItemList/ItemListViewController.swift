@@ -31,30 +31,51 @@ class ItemListViewController: UIViewController {
         
         ItemTableView.register(nib, forCellReuseIdentifier: "ItemTableViewCell")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       
+        super.viewWillAppear(animated)
+        
+        self.ItemTableView.reloadData()
+    }
 }
 
 
 extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        guard let item = itemInfo else { return 0 }
-//        return item.count
         
-        return 3
+        guard let item = itemInfo else { return 0 }
+       
+        return item.count
+        
+//        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell,
-        let item = itemInfo else { return UITableViewCell() }
+       
+            let item = itemInfo else { return UITableViewCell() }
         
-//        cell.setupTableViewCell(itemInfo: item[indexPath.row])
+        cell.setupTableViewCell(itemInfo: item[indexPath.row])
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       
         return 150
+    }
+}
+
+extension ItemListViewController: ItemViewControllerDelegate {
+   
+    func passData(items: [ItemInfo]) {
+        
+        self.itemInfo = items
+        
+        self.ItemTableView.reloadData()
     }
 }
 

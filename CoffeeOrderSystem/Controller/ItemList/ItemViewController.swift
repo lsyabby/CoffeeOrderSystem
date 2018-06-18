@@ -9,6 +9,11 @@
 import UIKit
 import Firebase
 
+protocol ItemViewControllerDelegate: class {
+    
+    func passData(items: [ItemInfo])
+}
+
 
 class ItemViewController: UIViewController {
 
@@ -16,6 +21,7 @@ class ItemViewController: UIViewController {
     private var btnListVC: ItemBtnListViewController!
     let firebaseManager = FirebaseManager()
     var itemInfo: [ItemInfo] = []
+    weak var delegate: ItemViewControllerDelegate?
     
     override func viewDidLoad() {
         
@@ -24,11 +30,13 @@ class ItemViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ItemListViewController, segue.identifier == "ItemListVC" {
-            
+
             self.itemListVC = destination
-            
+
             destination.itemInfo = self.itemInfo
             
+            self.delegate = destination
+
         } else if let destination = segue.destination as? ItemBtnListViewController, segue.identifier == "BtnListVC" {
             
             destination.delegate = self
@@ -46,5 +54,7 @@ extension ItemViewController: ItemBtnListViewControllerDelegate {
         self.itemInfo.append(info)
         
         itemListVC.itemInfo = self.itemInfo
+        
+        self.delegate?.passData(items: self.itemInfo)
     }
 }

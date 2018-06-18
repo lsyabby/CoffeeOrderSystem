@@ -12,16 +12,30 @@ class DetailThreeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var totalItemLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var commitBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupBtn()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupBtn() {
+        
+        cancelBtn.layer.borderWidth = 1
+        
+        cancelBtn.layer.borderColor = UIColor.gray.cgColor
+        
+        commitBtn.layer.borderWidth = 1
+        
+        commitBtn.layer.borderColor = UIColor.gray.cgColor
     }
     
     

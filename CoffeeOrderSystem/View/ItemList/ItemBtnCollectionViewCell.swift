@@ -12,6 +12,7 @@ import SDWebImage
 class ItemBtnCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var itemBtn: UIButton!
+    @IBOutlet weak var itemImageView: UIImageView!
     
     override func awakeFromNib() {
         
@@ -23,5 +24,7 @@ class ItemBtnCollectionViewCell: UICollectionViewCell {
         itemBtn.imageView?.contentMode = .scaleAspectFill
         
         itemBtn.sd_setBackgroundImage(with: URL(string: itemInfo), for: .normal)
+        
+        itemImageView.sd_setImage(with: URL(string: itemInfo))
     }
 }

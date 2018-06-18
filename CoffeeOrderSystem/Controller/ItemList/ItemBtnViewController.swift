@@ -20,18 +20,26 @@ class ItemBtnViewController: UIViewController {
     @IBOutlet weak var btn6: UIButton!
     @IBOutlet weak var btn7: UIButton!
     @IBOutlet weak var btn8: UIButton!
-    
+    let firebaseManager = FirebaseManager()
     var itemInfo: [ItemInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        getData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func getData() {
+        
+        firebaseManager.getItemInfo { (itemlist) in
+            
+            self.itemInfo = itemlist
+        }
+    }
+    
+    func setupBtn() {
+        
+         btn1.imageView?.image
     }
     
 

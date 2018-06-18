@@ -15,6 +15,14 @@
 		A04E8AE820D752CF0055E819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AE620D752CF0055E819 /* LaunchScreen.storyboard */; };
 		A04E8AF020D754500055E819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AEF20D754500055E819 /* GoogleService-Info.plist */; };
 		A04E8AF720D754B30055E819 /* COSUIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8AF620D754B30055E819 /* COSUIStoryboard.swift */; };
+		A04E8AF920D7559B0055E819 /* ItemList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AF820D7559B0055E819 /* ItemList.storyboard */; };
+		A04E8AFB20D755A40055E819 /* OrderList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AFA20D755A40055E819 /* OrderList.storyboard */; };
+		A04E8B0020D755F10055E819 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8AFF20D755F10055E819 /* TabBarViewController.swift */; };
+		A04E8B0220D7563B0055E819 /* ItemBtnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0120D7563B0055E819 /* ItemBtnViewController.swift */; };
+		A04E8B0420D7564D0055E819 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0320D7564D0055E819 /* ItemListViewController.swift */; };
+		A04E8B0720D758050055E819 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0520D758050055E819 /* ItemTableViewCell.swift */; };
+		A04E8B0820D758050055E819 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B0620D758050055E819 /* ItemTableViewCell.xib */; };
+		A04E8B0A20D759110055E819 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0920D759110055E819 /* OrderListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +37,14 @@
 		A04E8AE920D752CF0055E819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A04E8AEF20D754500055E819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A04E8AF620D754B30055E819 /* COSUIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COSUIStoryboard.swift; sourceTree = "<group>"; };
+		A04E8AF820D7559B0055E819 /* ItemList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemList.storyboard; sourceTree = "<group>"; };
+		A04E8AFA20D755A40055E819 /* OrderList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderList.storyboard; sourceTree = "<group>"; };
+		A04E8AFF20D755F10055E819 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A04E8B0120D7563B0055E819 /* ItemBtnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBtnViewController.swift; sourceTree = "<group>"; };
+		A04E8B0320D7564D0055E819 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		A04E8B0520D758050055E819 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		A04E8B0620D758050055E819 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		A04E8B0920D759110055E819 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		ECED922E080FF869E38D1613 /* Pods_CoffeeOrderSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrderSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,7 +105,6 @@
 				A04E8AF120D754790055E819 /* Extension */,
 				A04E8ADD20D752CE0055E819 /* AppDelegate.swift */,
 				A04E8ADF20D752CE0055E819 /* ViewController.swift */,
-				A04E8AE120D752CE0055E819 /* Main.storyboard */,
 				A04E8AE420D752CF0055E819 /* Assets.xcassets */,
 				A04E8AE620D752CF0055E819 /* LaunchScreen.storyboard */,
 				A04E8AE920D752CF0055E819 /* Info.plist */,
@@ -109,6 +124,9 @@
 		A04E8AF220D754840055E819 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				A04E8AE120D752CE0055E819 /* Main.storyboard */,
+				A04E8AF820D7559B0055E819 /* ItemList.storyboard */,
+				A04E8AFA20D755A40055E819 /* OrderList.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -116,6 +134,9 @@
 		A04E8AF320D7548D0055E819 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A04E8AFC20D755BD0055E819 /* ItemList */,
+				A04E8AFD20D755C60055E819 /* OrderList */,
+				A04E8AFE20D755DB0055E819 /* TabBar */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,6 +144,8 @@
 		A04E8AF420D754950055E819 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A04E8B0520D758050055E819 /* ItemTableViewCell.swift */,
+				A04E8B0620D758050055E819 /* ItemTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +155,31 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A04E8AFC20D755BD0055E819 /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				A04E8B0120D7563B0055E819 /* ItemBtnViewController.swift */,
+				A04E8B0320D7564D0055E819 /* ItemListViewController.swift */,
+			);
+			path = ItemList;
+			sourceTree = "<group>";
+		};
+		A04E8AFD20D755C60055E819 /* OrderList */ = {
+			isa = PBXGroup;
+			children = (
+				A04E8B0920D759110055E819 /* OrderListViewController.swift */,
+			);
+			path = OrderList;
+			sourceTree = "<group>";
+		};
+		A04E8AFE20D755DB0055E819 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A04E8AFF20D755F10055E819 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,8 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A04E8AE820D752CF0055E819 /* LaunchScreen.storyboard in Resources */,
+				A04E8AFB20D755A40055E819 /* OrderList.storyboard in Resources */,
 				A04E8AE520D752CF0055E819 /* Assets.xcassets in Resources */,
+				A04E8AF920D7559B0055E819 /* ItemList.storyboard in Resources */,
 				A04E8AE320D752CE0055E819 /* Main.storyboard in Resources */,
+				A04E8B0820D758050055E819 /* ItemTableViewCell.xib in Resources */,
 				A04E8AF020D754500055E819 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04E8B0020D755F10055E819 /* TabBarViewController.swift in Sources */,
 				A04E8AE020D752CE0055E819 /* ViewController.swift in Sources */,
 				A04E8ADE20D752CE0055E819 /* AppDelegate.swift in Sources */,
 				A04E8AF720D754B30055E819 /* COSUIStoryboard.swift in Sources */,
+				A04E8B0220D7563B0055E819 /* ItemBtnViewController.swift in Sources */,
+				A04E8B0720D758050055E819 /* ItemTableViewCell.swift in Sources */,
+				A04E8B0420D7564D0055E819 /* ItemListViewController.swift in Sources */,
+				A04E8B0A20D759110055E819 /* OrderListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +470,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoffeeOrderSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lsyabby.CoffeeOrderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -429,7 +488,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoffeeOrderSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lsyabby.CoffeeOrderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

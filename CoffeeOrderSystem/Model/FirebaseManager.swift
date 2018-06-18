@@ -67,6 +67,7 @@ class FirebaseManager {
                 let status = k.value["status"] as? Int,
                 let time = k.value["time"] as? Int else { return }
                 
+                
                 let info = OrderInfo(number: number, account: acount, itemCount: itemcount, price: price, status: status, time: time)
                 
                 infoList.append(info)

@@ -48,8 +48,6 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let item = itemInfo else { return 0 }
        
         return item.count
-        
-//        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,7 +63,21 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        
-        return 150
+        return 130
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            itemInfo?.remove(at: indexPath.row)
+            
+            tableView.beginUpdates()
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            tableView.endUpdates()
+        }
     }
 }
 

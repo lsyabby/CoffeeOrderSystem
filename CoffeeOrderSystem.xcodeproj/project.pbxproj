@@ -37,6 +37,7 @@
 		A04E8B2820D7A5AF0055E819 /* DetailTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B2620D7A5AF0055E819 /* DetailTwoTableViewCell.xib */; };
 		A04E8B2B20D7A7A60055E819 /* DetailThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B2920D7A7A60055E819 /* DetailThreeTableViewCell.swift */; };
 		A04E8B2C20D7A7A60055E819 /* DetailThreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B2A20D7A7A60055E819 /* DetailThreeTableViewCell.xib */; };
+		A04E8B2F20D7CF890055E819 /* COSRadioBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B2E20D7CF890055E819 /* COSRadioBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		A04E8B2620D7A5AF0055E819 /* DetailTwoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTwoTableViewCell.xib; sourceTree = "<group>"; };
 		A04E8B2920D7A7A60055E819 /* DetailThreeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailThreeTableViewCell.swift; sourceTree = "<group>"; };
 		A04E8B2A20D7A7A60055E819 /* DetailThreeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailThreeTableViewCell.xib; sourceTree = "<group>"; };
+		A04E8B2E20D7CF890055E819 /* COSRadioBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COSRadioBtn.swift; sourceTree = "<group>"; };
 		ECED922E080FF869E38D1613 /* Pods_CoffeeOrderSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrderSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 		A04E8AF420D754950055E819 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A04E8B2D20D7CF590055E819 /* RadioBtn */,
 				A04E8B1C20D792DB0055E819 /* ItemList */,
 				A04E8B1720D792860055E819 /* OrderList */,
 			);
@@ -246,6 +249,14 @@
 				A04E8B2A20D7A7A60055E819 /* DetailThreeTableViewCell.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		A04E8B2D20D7CF590055E819 /* RadioBtn */ = {
+			isa = PBXGroup;
+			children = (
+				A04E8B2E20D7CF890055E819 /* COSRadioBtn.swift */,
+			);
+			path = RadioBtn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +408,7 @@
 				A04E8B1220D76DA20055E819 /* ItemBtnListViewController.swift in Sources */,
 				A04E8B2220D7A4C60055E819 /* DetailOneTableViewCell.swift in Sources */,
 				A04E8B2720D7A5AF0055E819 /* DetailTwoTableViewCell.swift in Sources */,
+				A04E8B2F20D7CF890055E819 /* COSRadioBtn.swift in Sources */,
 				A04E8AF720D754B30055E819 /* COSUIStoryboard.swift in Sources */,
 				A04E8B0E20D75B6E0055E819 /* ItemInfo.swift in Sources */,
 				A04E8B0220D7563B0055E819 /* ItemViewController.swift in Sources */,

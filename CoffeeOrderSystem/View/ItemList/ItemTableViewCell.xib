@@ -154,8 +154,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="hotBtn" destination="0SI-ON-v18" id="w0S-PL-xQj"/>
+                <outlet property="icedBtn" destination="jMQ-GG-AiT" id="6kA-S1-B2x"/>
                 <outlet property="itemImageView" destination="bOx-TR-baq" id="fXr-6v-NBb"/>
                 <outlet property="itemNameLabel" destination="SJY-lx-I4X" id="5Et-3p-idu"/>
+                <outlet property="sugarNoBtn" destination="Q21-b0-QlE" id="yKk-2w-ccK"/>
+                <outlet property="sugarYesBtn" destination="lwy-IF-TNG" id="3aX-NE-P0j"/>
             </connections>
             <point key="canvasLocation" x="43.5" y="-28"/>
         </tableViewCell>

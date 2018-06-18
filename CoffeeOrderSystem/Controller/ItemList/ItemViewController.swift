@@ -12,6 +12,7 @@ import Firebase
 
 class ItemViewController: UIViewController {
 
+    @IBOutlet weak var confirmBtn: UIButton!
     private var itemListVC: ItemListViewController!
     private var btnListVC: ItemBtnListViewController!
     let firebaseManager = FirebaseManager()
@@ -20,6 +21,8 @@ class ItemViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        setupConfirmBtn()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,6 +39,13 @@ class ItemViewController: UIViewController {
             
             self.btnListVC = destination
         }
+    }
+    
+    func setupConfirmBtn() {
+        
+        confirmBtn.layer.borderWidth = 1
+        
+        confirmBtn.layer.borderColor = UIColor.gray.cgColor
     }
 }
 

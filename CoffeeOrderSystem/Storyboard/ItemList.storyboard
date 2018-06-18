@@ -24,7 +24,7 @@
                                     <segue destination="An0-Pc-3LP" kind="embed" identifier="ItemListVC" id="tgV-oe-WE6"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-hK-a10">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-hK-a10">
                                 <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +57,9 @@
                         <viewLayoutGuide key="safeArea" id="QgU-Li-0pw"/>
                     </view>
                     <navigationItem key="navigationItem" title="AWS Cafe" id="UHD-cl-3XL"/>
+                    <connections>
+                        <outlet property="confirmBtn" destination="sVd-hK-a10" id="35E-Bm-dZg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmd-3J-oKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-0u-YJA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pu5-0u-YJA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -154,6 +157,7 @@
                             <constraint firstAttribute="bottom" secondItem="98M-Cy-tYj" secondAttribute="bottom" id="VTu-rE-C5o"/>
                             <constraint firstItem="98M-Cy-tYj" firstAttribute="leading" secondItem="vN0-Bh-mfE" secondAttribute="leading" id="XzP-ch-U3m"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="7MC-7E-tWV"/>
                     </view>
                     <connections>
                         <outlet property="btnCollectionView" destination="98M-Cy-tYj" id="Pb9-7b-Jd7"/>

@@ -14,6 +14,11 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemNameLabel: UILabel!
     
+    @IBOutlet weak var icedBtn: UIButton!
+    @IBOutlet weak var hotBtn: UIButton!
+    @IBOutlet weak var sugarYesBtn: UIButton!
+    @IBOutlet weak var sugarNoBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,23 +36,38 @@ class ItemTableViewCell: UITableViewCell {
         
         if sender.isSelected {
             
-            
+            hotBtn.isSelected = !sender.isSelected
         }
     }
     
     @IBAction func hotAction(_ sender: UIButton) {
         
         sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            
+            icedBtn.isSelected = !sender.isSelected
+        }
     }
     
     @IBAction func sugarYesAction(_ sender: UIButton) {
         
         sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            
+            sugarNoBtn.isSelected = !sender.isSelected
+        }
     }
     
     @IBAction func sugarNoAction(_ sender: UIButton) {
         
         sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            
+            sugarYesBtn.isSelected = !sender.isSelected
+        }
     }
     
     func setupTableViewCell(itemInfo: ItemInfo) {

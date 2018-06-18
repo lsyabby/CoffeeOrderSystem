@@ -10,8 +10,9 @@ import UIKit
 
 class ItemListViewController: UIViewController {
     
-    
-    var itemList: [ItemInfo] = []
+    var selectedInt: [Int] = []
+    var itemInfo: [ItemInfo] = []
+    var seletedItems: [ItemInfo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,12 @@ class ItemListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func filterItems() {
+        
+        for iii in itemInfo {
+            
+        }
+    }
 
 }
 
@@ -32,7 +38,7 @@ class ItemListViewController: UIViewController {
 extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count
+        return itemInfo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

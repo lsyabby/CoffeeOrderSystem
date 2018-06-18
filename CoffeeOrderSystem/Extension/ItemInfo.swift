@@ -14,3 +14,15 @@ struct ItemInfo {
     var price: Int
     var image: String
 }
+
+
+enum ItemIndex: Int {
+    
+    case Espresso = 0
+    case Americano = 1
+    case Latte = 2
+    case Mocha = 3
+    case SingleOrigin = 4
+    case BlackTea = 5
+    case GreenTea = 6
+}

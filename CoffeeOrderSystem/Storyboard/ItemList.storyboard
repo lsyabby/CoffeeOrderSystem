@@ -33,6 +33,9 @@
                                                     <constraint firstAttribute="width" constant="70" id="cHh-Wx-stO"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="btn1Action:" destination="CPr-k9-CRr" eventType="touchUpInside" id="TQA-hr-iMp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOw-eN-hO2">
                                                 <rect key="frame" x="90" y="0.0" width="70" height="70"/>
@@ -42,6 +45,9 @@
                                                     <constraint firstAttribute="width" secondItem="cOw-eN-hO2" secondAttribute="height" multiplier="1:1" id="sx7-eD-MiX"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="btn2Action:" destination="CPr-k9-CRr" eventType="touchUpInside" id="zzy-ag-6Si"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43E-Yg-Mqb">
                                                 <rect key="frame" x="180" y="0.0" width="70" height="70"/>
@@ -129,7 +135,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3g-ee-6cM">
                                 <rect key="frame" x="0.0" y="235" width="375" height="402"/>
                                 <connections>
-                                    <segue destination="An0-Pc-3LP" kind="embed" id="tgV-oe-WE6"/>
+                                    <segue destination="An0-Pc-3LP" kind="embed" identifier="ItemListVC" id="tgV-oe-WE6"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-hK-a10">
@@ -195,6 +201,7 @@
                             <constraint firstItem="pu5-0u-YJA" firstAttribute="leading" secondItem="tFy-rz-WWe" secondAttribute="leading" id="TDE-vU-aEV"/>
                             <constraint firstAttribute="trailing" secondItem="pu5-0u-YJA" secondAttribute="trailing" id="qce-4D-Bb5"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Pm-pn-Jwn"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeK-Nl-CWY" userLabel="First Responder" sceneMemberID="firstResponder"/>

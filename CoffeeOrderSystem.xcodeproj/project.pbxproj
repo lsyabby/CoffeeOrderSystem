@@ -28,6 +28,8 @@
 		A04E8B1220D76DA20055E819 /* ItemBtnListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B1120D76DA20055E819 /* ItemBtnListViewController.swift */; };
 		A04E8B1520D76DE70055E819 /* ItemBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B1320D76DE70055E819 /* ItemBtnCollectionViewCell.swift */; };
 		A04E8B1620D76DE70055E819 /* ItemBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B1420D76DE70055E819 /* ItemBtnCollectionViewCell.xib */; };
+		A04E8B1A20D792D50055E819 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B1820D792D50055E819 /* OrderTableViewCell.swift */; };
+		A04E8B1B20D792D50055E819 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B1920D792D50055E819 /* OrderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		A04E8B1120D76DA20055E819 /* ItemBtnListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBtnListViewController.swift; sourceTree = "<group>"; };
 		A04E8B1320D76DE70055E819 /* ItemBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBtnCollectionViewCell.swift; sourceTree = "<group>"; };
 		A04E8B1420D76DE70055E819 /* ItemBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemBtnCollectionViewCell.xib; sourceTree = "<group>"; };
+		A04E8B1820D792D50055E819 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		A04E8B1920D792D50055E819 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		ECED922E080FF869E38D1613 /* Pods_CoffeeOrderSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrderSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,10 +159,8 @@
 		A04E8AF420D754950055E819 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A04E8B0520D758050055E819 /* ItemTableViewCell.swift */,
-				A04E8B0620D758050055E819 /* ItemTableViewCell.xib */,
-				A04E8B1320D76DE70055E819 /* ItemBtnCollectionViewCell.swift */,
-				A04E8B1420D76DE70055E819 /* ItemBtnCollectionViewCell.xib */,
+				A04E8B1C20D792DB0055E819 /* ItemList */,
+				A04E8B1720D792860055E819 /* OrderList */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +197,26 @@
 				A04E8AFF20D755F10055E819 /* TabBarViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		A04E8B1720D792860055E819 /* OrderList */ = {
+			isa = PBXGroup;
+			children = (
+				A04E8B1820D792D50055E819 /* OrderTableViewCell.swift */,
+				A04E8B1920D792D50055E819 /* OrderTableViewCell.xib */,
+			);
+			path = OrderList;
+			sourceTree = "<group>";
+		};
+		A04E8B1C20D792DB0055E819 /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				A04E8B0520D758050055E819 /* ItemTableViewCell.swift */,
+				A04E8B0620D758050055E819 /* ItemTableViewCell.xib */,
+				A04E8B1320D76DE70055E819 /* ItemBtnCollectionViewCell.swift */,
+				A04E8B1420D76DE70055E819 /* ItemBtnCollectionViewCell.xib */,
+			);
+			path = ItemList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,7 @@
 				A04E8B1620D76DE70055E819 /* ItemBtnCollectionViewCell.xib in Resources */,
 				A04E8AE820D752CF0055E819 /* LaunchScreen.storyboard in Resources */,
 				A04E8AFB20D755A40055E819 /* OrderList.storyboard in Resources */,
+				A04E8B1B20D792D50055E819 /* OrderTableViewCell.xib in Resources */,
 				A04E8AE520D752CF0055E819 /* Assets.xcassets in Resources */,
 				A04E8AF920D7559B0055E819 /* ItemList.storyboard in Resources */,
 				A04E8AE320D752CE0055E819 /* Main.storyboard in Resources */,
@@ -280,14 +303,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeOrderSystem/Pods-CoffeeOrderSystem-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -348,6 +369,7 @@
 				A04E8B0720D758050055E819 /* ItemTableViewCell.swift in Sources */,
 				A04E8B0420D7564D0055E819 /* ItemListViewController.swift in Sources */,
 				A04E8B0A20D759110055E819 /* OrderListViewController.swift in Sources */,
+				A04E8B1A20D792D50055E819 /* OrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +526,10 @@
 					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
 				);
 				INFOPLIST_FILE = CoffeeOrderSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lsyabby.CoffeeOrderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -529,7 +554,10 @@
 					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
 				);
 				INFOPLIST_FILE = CoffeeOrderSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lsyabby.CoffeeOrderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

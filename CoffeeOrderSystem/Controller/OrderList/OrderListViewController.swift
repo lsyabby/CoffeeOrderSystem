@@ -10,26 +10,70 @@ import UIKit
 
 class OrderListViewController: UIViewController {
 
+    @IBOutlet weak var orderTableView: UITableView!
+    
+    let firebaseManager = FirebaseManager()
+    var itemInfo: [OrderInfo] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupTableView()
+        
+        firebaseManager.delegate = self
+        
+        firebaseManager.getOrderInfo()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupTableView() {
+        
+        orderTableView.delegate = self
+        
+        orderTableView.dataSource = self
+        
+        let nib = UINib(nibName: "OrderTableViewCell", bundle: nil)
+        
+        orderTableView.register(nib, forCellReuseIdentifier: "OrderTableViewCell")
+    }
+
+}
+
+
+extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        return itemInfo.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as? OrderTableViewCell {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+            cell.setupOrderCell(iteminfo: itemInfo[indexPath.row])
+            
+            return cell
+        }
+        
+        return UITableViewCell()
     }
-    */
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+}
 
+
+extension OrderListViewController: FirebaseManagerDelegate {
+   
+    func manager(didGetItems: [ItemInfo]) {
+        print("===============")
+    }
+    
+    func manager(didGetOrders: [OrderInfo]) {
+       
+        self.itemInfo = didGetOrders
+        
+        self.orderTableView.reloadData()
+    }
 }

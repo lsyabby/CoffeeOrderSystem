@@ -77,8 +77,11 @@ extension ItemBtnListViewController: UICollectionViewDelegate, UICollectionViewD
 
 
 extension ItemBtnListViewController: FirebaseManagerDelegate {
+    func manager(didGetOrders: [OrderInfo]) {
+        print("===============")
+    }
 
-    func manager(didGet: [ItemInfo]) {
+    func manager(didGetItems didGet: [ItemInfo]) {
 
         self.itemInfo = didGet
 

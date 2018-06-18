@@ -12,7 +12,9 @@ import FirebaseDatabase
 
 protocol FirebaseManagerDelegate: class {
 
-    func manager(didGet: [ItemInfo])
+    func manager(didGetItems: [ItemInfo])
+    
+    func manager(didGetOrders: [OrderInfo])
 }
 
 
@@ -40,7 +42,36 @@ class FirebaseManager {
                 infoList.append(info)
             }
             
-            self.delegate?.manager(didGet: infoList)
+            self.delegate?.manager(didGetItems: infoList)
+        }
+    }
+    
+    func getOrderInfo() {
+        
+        self.ref.observeSingleEvent(of: .value) { (snapshot) in
+            
+            var infoList: [OrderInfo] = []
+            
+            guard let json = snapshot.value as? [String: Any] else { return }
+            
+            guard let jsonResult = json["orders"] as? [String: [String: Any]] else { return }
+
+            for k in jsonResult {
+                
+                let number = k.key
+                
+                guard let acount = k.value["account"] as? String,
+                let itemcount = k.value["itemCount"] as? Int,
+                let price = k.value["price"] as? Int,
+                let status = k.value["status"] as? Int,
+                let time = k.value["time"] as? Int else { return }
+                
+                let info = OrderInfo(number: number, account: acount, itemCount: itemcount, price: price, status: status, time: time)
+                
+                infoList.append(info)
+            }
+            
+            self.delegate?.manager(didGetOrders: infoList)
         }
     }
 }

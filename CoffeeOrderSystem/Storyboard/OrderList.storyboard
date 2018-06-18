@@ -33,6 +33,9 @@
                         <viewLayoutGuide key="safeArea" id="Jl5-01-HSR"/>
                     </view>
                     <navigationItem key="navigationItem" title="AWS Cafe" id="dnb-hf-EWH"/>
+                    <connections>
+                        <outlet property="orderTableView" destination="AeT-Rs-jQf" id="i9p-fV-xBH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRk-Kd-6Po" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

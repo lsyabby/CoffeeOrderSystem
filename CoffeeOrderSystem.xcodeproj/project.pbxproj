@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4B427076B4482E180EA6ECE2 /* Pods_CoffeeOrderSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECED922E080FF869E38D1613 /* Pods_CoffeeOrderSystem.framework */; };
 		A04E8ADE20D752CE0055E819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8ADD20D752CE0055E819 /* AppDelegate.swift */; };
-		A04E8AE020D752CE0055E819 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8ADF20D752CE0055E819 /* ViewController.swift */; };
 		A04E8AE320D752CE0055E819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AE120D752CE0055E819 /* Main.storyboard */; };
 		A04E8AE520D752CF0055E819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AE420D752CF0055E819 /* Assets.xcassets */; };
 		A04E8AE820D752CF0055E819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04E8AE620D752CF0055E819 /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		96C49038634780D2F236941D /* Pods-CoffeeOrderSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeOrderSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeOrderSystem/Pods-CoffeeOrderSystem.release.xcconfig"; sourceTree = "<group>"; };
 		A04E8ADA20D752CE0055E819 /* CoffeeOrderSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeOrderSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04E8ADD20D752CE0055E819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A04E8ADF20D752CE0055E819 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A04E8AE220D752CE0055E819 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A04E8AE420D752CF0055E819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04E8AE720D752CF0055E819 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				A04E8AF220D754840055E819 /* Storyboard */,
 				A04E8AF120D754790055E819 /* Extension */,
 				A04E8ADD20D752CE0055E819 /* AppDelegate.swift */,
-				A04E8ADF20D752CE0055E819 /* ViewController.swift */,
 				A04E8AE420D752CF0055E819 /* Assets.xcassets */,
 				A04E8AE620D752CF0055E819 /* LaunchScreen.storyboard */,
 				A04E8AE920D752CF0055E819 /* Info.plist */,
@@ -401,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A04E8B0020D755F10055E819 /* TabBarViewController.swift in Sources */,
-				A04E8AE020D752CE0055E819 /* ViewController.swift in Sources */,
 				A04E8B1020D75BFF0055E819 /* FirebaseManager.swift in Sources */,
 				A04E8ADE20D752CE0055E819 /* AppDelegate.swift in Sources */,
 				A04E8B1520D76DE70055E819 /* ItemBtnCollectionViewCell.swift in Sources */,

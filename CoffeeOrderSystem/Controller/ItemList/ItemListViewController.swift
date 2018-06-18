@@ -81,13 +81,3 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ItemListViewController: ItemViewControllerDelegate {
-   
-    func passData(items: [ItemInfo]) {
-        
-        self.itemInfo = items
-        
-        self.ItemTableView.reloadData()
-    }
-}
-

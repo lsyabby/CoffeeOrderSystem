@@ -25,6 +25,31 @@ class ItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func icedAction(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            
+            
+        }
+    }
+    
+    @IBAction func hotAction(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func sugarYesAction(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+    }
+    
+    @IBAction func sugarNoAction(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+    }
+    
     func setupTableViewCell(itemInfo: ItemInfo) {
         
         itemImageView.sd_setImage(with: URL(string: itemInfo.image))

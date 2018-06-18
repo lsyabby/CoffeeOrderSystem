@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "check-list.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "check-list.png",
       "scale" : "2x"
     },
     {

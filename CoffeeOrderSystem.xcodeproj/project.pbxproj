@@ -25,6 +25,9 @@
 		A04E8B0A20D759110055E819 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0920D759110055E819 /* OrderListViewController.swift */; };
 		A04E8B0E20D75B6E0055E819 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0D20D75B6E0055E819 /* ItemInfo.swift */; };
 		A04E8B1020D75BFF0055E819 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0F20D75BFF0055E819 /* FirebaseManager.swift */; };
+		A04E8B1220D76DA20055E819 /* ItemBtnListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B1120D76DA20055E819 /* ItemBtnListViewController.swift */; };
+		A04E8B1520D76DE70055E819 /* ItemBtnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B1320D76DE70055E819 /* ItemBtnCollectionViewCell.swift */; };
+		A04E8B1620D76DE70055E819 /* ItemBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B1420D76DE70055E819 /* ItemBtnCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		A04E8B0920D759110055E819 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		A04E8B0D20D75B6E0055E819 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
 		A04E8B0F20D75BFF0055E819 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		A04E8B1120D76DA20055E819 /* ItemBtnListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBtnListViewController.swift; sourceTree = "<group>"; };
+		A04E8B1320D76DE70055E819 /* ItemBtnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBtnCollectionViewCell.swift; sourceTree = "<group>"; };
+		A04E8B1420D76DE70055E819 /* ItemBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemBtnCollectionViewCell.xib; sourceTree = "<group>"; };
 		ECED922E080FF869E38D1613 /* Pods_CoffeeOrderSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrderSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +157,8 @@
 			children = (
 				A04E8B0520D758050055E819 /* ItemTableViewCell.swift */,
 				A04E8B0620D758050055E819 /* ItemTableViewCell.xib */,
+				A04E8B1320D76DE70055E819 /* ItemBtnCollectionViewCell.swift */,
+				A04E8B1420D76DE70055E819 /* ItemBtnCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			children = (
 				A04E8B0120D7563B0055E819 /* ItemBtnViewController.swift */,
 				A04E8B0320D7564D0055E819 /* ItemListViewController.swift */,
+				A04E8B1120D76DA20055E819 /* ItemBtnListViewController.swift */,
 			);
 			path = ItemList;
 			sourceTree = "<group>";
@@ -249,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04E8B1620D76DE70055E819 /* ItemBtnCollectionViewCell.xib in Resources */,
 				A04E8AE820D752CF0055E819 /* LaunchScreen.storyboard in Resources */,
 				A04E8AFB20D755A40055E819 /* OrderList.storyboard in Resources */,
 				A04E8AE520D752CF0055E819 /* Assets.xcassets in Resources */,
@@ -328,6 +338,8 @@
 				A04E8AE020D752CE0055E819 /* ViewController.swift in Sources */,
 				A04E8B1020D75BFF0055E819 /* FirebaseManager.swift in Sources */,
 				A04E8ADE20D752CE0055E819 /* AppDelegate.swift in Sources */,
+				A04E8B1520D76DE70055E819 /* ItemBtnCollectionViewCell.swift in Sources */,
+				A04E8B1220D76DA20055E819 /* ItemBtnListViewController.swift in Sources */,
 				A04E8AF720D754B30055E819 /* COSUIStoryboard.swift in Sources */,
 				A04E8B0E20D75B6E0055E819 /* ItemInfo.swift in Sources */,
 				A04E8B0220D7563B0055E819 /* ItemBtnViewController.swift in Sources */,

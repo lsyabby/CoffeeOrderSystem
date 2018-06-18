@@ -40,7 +40,7 @@ class ItemBtnViewController: UIViewController {
         
         getData()
         
-        btn1.addTarget(self, action: #selector(btnSelectItem), for: .touchUpInside)
+//        btn1.addTarget(self, action: #selector(btnSelectItem), for: .touchUpInside)
     }
 
     func getData() {

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailThreeTableViewCell" rowHeight="73" id="KGk-i7-Jjw" customClass="DetailThreeTableViewCell" customModule="CoffeeOrderSystem" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vb-fi-NaV">
+                        <rect key="frame" x="0.0" y="42.5" width="375" height="30"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3E-2C-zTg">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10a-Nm-yEc">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                <state key="normal" title="Commit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="l3E-2C-zTg" firstAttribute="width" secondItem="10a-Nm-yEc" secondAttribute="width" id="YBa-LO-rPf"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Items :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWu-cZ-Ew7">
+                        <rect key="frame" x="16" y="12" width="83.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWG-eN-i03">
+                        <rect key="frame" x="107" y="12" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zni-vv-Ba4">
+                        <rect key="frame" x="233" y="12" width="80.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LME-e3-WLr">
+                        <rect key="frame" x="321" y="12" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LME-e3-WLr" firstAttribute="leading" secondItem="Zni-vv-Ba4" secondAttribute="trailing" constant="8" id="7I4-9w-xYY"/>
+                    <constraint firstItem="7Vb-fi-NaV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="99z-X9-upi"/>
+                    <constraint firstItem="Zni-vv-Ba4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="EVT-yj-KDI"/>
+                    <constraint firstItem="EWG-eN-i03" firstAttribute="leading" secondItem="eWu-cZ-Ew7" secondAttribute="trailing" constant="8" id="GOi-dD-3wO"/>
+                    <constraint firstItem="eWu-cZ-Ew7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GSt-T5-CVc"/>
+                    <constraint firstAttribute="trailing" secondItem="7Vb-fi-NaV" secondAttribute="trailing" id="GTN-6V-QC7"/>
+                    <constraint firstItem="l3E-2C-zTg" firstAttribute="top" secondItem="eWu-cZ-Ew7" secondAttribute="bottom" constant="12" id="LOx-Lc-I8Z"/>
+                    <constraint firstAttribute="trailing" secondItem="LME-e3-WLr" secondAttribute="trailing" constant="16" id="hS7-IW-WZY"/>
+                    <constraint firstItem="eWu-cZ-Ew7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="kK2-Rr-JX6"/>
+                    <constraint firstItem="LME-e3-WLr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="oYA-39-gi1"/>
+                    <constraint firstAttribute="bottom" secondItem="7Vb-fi-NaV" secondAttribute="bottom" id="uHh-tf-0ni"/>
+                    <constraint firstItem="EWG-eN-i03" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="yeQ-iN-oSP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="totalItemLabel" destination="EWG-eN-i03" id="dWT-tZ-k2u"/>
+                <outlet property="totalPriceLabel" destination="LME-e3-WLr" id="tJa-by-Giz"/>
+            </connections>
+            <point key="canvasLocation" x="-104.5" y="-74.5"/>
+        </tableViewCell>
+    </objects>
+</document>

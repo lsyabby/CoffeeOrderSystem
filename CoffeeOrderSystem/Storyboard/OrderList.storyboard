@@ -41,6 +41,40 @@
             </objects>
             <point key="canvasLocation" x="788" y="78"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="rx6-4C-MjZ">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="vy2-A7-EKu" customClass="DetailViewController" customModule="CoffeeOrderSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YeB-jB-E1K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-2Y-DYa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vy2-A7-EKu" id="KF0-Wf-brg"/>
+                                    <outlet property="delegate" destination="vy2-A7-EKu" id="ghH-CV-yQy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GtR-2Y-DYa" firstAttribute="bottom" secondItem="yfn-Vd-Uqo" secondAttribute="bottom" id="0S4-PD-DKT"/>
+                            <constraint firstItem="GtR-2Y-DYa" firstAttribute="top" secondItem="yfn-Vd-Uqo" secondAttribute="top" id="HUg-07-m7A"/>
+                            <constraint firstItem="GtR-2Y-DYa" firstAttribute="leading" secondItem="yfn-Vd-Uqo" secondAttribute="leading" id="IY6-cF-wxY"/>
+                            <constraint firstItem="GtR-2Y-DYa" firstAttribute="trailing" secondItem="yfn-Vd-Uqo" secondAttribute="trailing" id="VGC-8l-slh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yfn-Vd-Uqo"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailTableView" destination="GtR-2Y-DYa" id="B9s-Nu-tmu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2b-HR-Mlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="77.811094452773617"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sJI-AD-oPG">
             <objects>

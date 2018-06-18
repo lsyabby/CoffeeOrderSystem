@@ -61,6 +61,12 @@ extension OrderListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailVC = UIStoryboard.orderListStoryboard().instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as? DetailViewController else { return }
+        detailVC.itemInfo = self.itemInfo[indexPath.row]
+        show(detailVC, sender: nil)
+    }
 }
 
 

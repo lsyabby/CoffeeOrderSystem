@@ -51,6 +51,7 @@ class FirebaseManager {
         self.ref.observeSingleEvent(of: .value) { (snapshot) in
             
             var infoList: [OrderInfo] = []
+            var coffeeList: [Coffee] = []
             
             guard let json = snapshot.value as? [String: Any] else { return }
             

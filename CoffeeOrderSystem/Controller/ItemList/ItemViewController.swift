@@ -27,10 +27,7 @@ class ItemViewController: UIViewController {
             
             self.itemListVC = destination
             
-//            destination.selectedInt = self.selectedInt
-            
             destination.itemInfo = self.itemInfo
-            
             
         } else if let destination = segue.destination as? ItemBtnListViewController, segue.identifier == "BtnListVC" {
             
@@ -47,5 +44,7 @@ extension ItemViewController: ItemBtnListViewControllerDelegate {
     func itemSelect(info: ItemInfo) {
         
         self.itemInfo.append(info)
+        
+        itemListVC.itemInfo = self.itemInfo
     }
 }

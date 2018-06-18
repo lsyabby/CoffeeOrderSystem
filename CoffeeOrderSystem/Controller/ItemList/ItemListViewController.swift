@@ -37,10 +37,10 @@ class ItemListViewController: UIViewController {
 extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let item = itemInfo else { return 0 }
-        return item.count
+//        guard let item = itemInfo else { return 0 }
+//        return item.count
         
-//        return 3
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +48,7 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as? ItemTableViewCell,
         let item = itemInfo else { return UITableViewCell() }
         
-        cell.setupTableViewCell(itemInfo: item[indexPath.row])
+//        cell.setupTableViewCell(itemInfo: item[indexPath.row])
         
         return cell
     }

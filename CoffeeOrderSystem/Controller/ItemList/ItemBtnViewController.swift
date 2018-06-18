@@ -11,7 +11,6 @@ import Firebase
 
 
 class ItemBtnViewController: UIViewController {
-
     
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
@@ -22,7 +21,7 @@ class ItemBtnViewController: UIViewController {
     @IBOutlet weak var btn7: UIButton!
     @IBOutlet weak var btn8: UIButton!
     
-    
+    var itemInfo: [ItemInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

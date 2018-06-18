@@ -7,5 +7,6 @@ target 'CoffeeOrderSystem' do
 
   # Pods for CoffeeOrderSystem
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end

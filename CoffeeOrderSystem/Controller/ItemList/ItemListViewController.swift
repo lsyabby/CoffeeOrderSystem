@@ -11,7 +11,7 @@ import UIKit
 class ItemListViewController: UIViewController {
     
     
-    var itemList: [String] = []
+    var itemList: [ItemInfo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

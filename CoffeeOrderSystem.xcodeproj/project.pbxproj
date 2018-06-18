@@ -23,6 +23,8 @@
 		A04E8B0720D758050055E819 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0520D758050055E819 /* ItemTableViewCell.swift */; };
 		A04E8B0820D758050055E819 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A04E8B0620D758050055E819 /* ItemTableViewCell.xib */; };
 		A04E8B0A20D759110055E819 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0920D759110055E819 /* OrderListViewController.swift */; };
+		A04E8B0E20D75B6E0055E819 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0D20D75B6E0055E819 /* ItemInfo.swift */; };
+		A04E8B1020D75BFF0055E819 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04E8B0F20D75BFF0055E819 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		A04E8B0520D758050055E819 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		A04E8B0620D758050055E819 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		A04E8B0920D759110055E819 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		A04E8B0D20D75B6E0055E819 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
+		A04E8B0F20D75BFF0055E819 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		ECED922E080FF869E38D1613 /* Pods_CoffeeOrderSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeOrderSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A04E8AF620D754B30055E819 /* COSUIStoryboard.swift */,
+				A04E8B0D20D75B6E0055E819 /* ItemInfo.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 		A04E8AF520D7549D0055E819 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A04E8B0F20D75BFF0055E819 /* FirebaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,11 +270,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeOrderSystem/Pods-CoffeeOrderSystem-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,8 +326,10 @@
 			files = (
 				A04E8B0020D755F10055E819 /* TabBarViewController.swift in Sources */,
 				A04E8AE020D752CE0055E819 /* ViewController.swift in Sources */,
+				A04E8B1020D75BFF0055E819 /* FirebaseManager.swift in Sources */,
 				A04E8ADE20D752CE0055E819 /* AppDelegate.swift in Sources */,
 				A04E8AF720D754B30055E819 /* COSUIStoryboard.swift in Sources */,
+				A04E8B0E20D75B6E0055E819 /* ItemInfo.swift in Sources */,
 				A04E8B0220D7563B0055E819 /* ItemBtnViewController.swift in Sources */,
 				A04E8B0720D758050055E819 /* ItemTableViewCell.swift in Sources */,
 				A04E8B0420D7564D0055E819 /* ItemListViewController.swift in Sources */,
@@ -470,10 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoffeeOrderSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lsyabby.CoffeeOrderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -488,10 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoffeeOrderSystem/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lsyabby.CoffeeOrderSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
